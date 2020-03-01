@@ -1,0 +1,28 @@
+<template>
+    <template for:each={data} for:item="acc">
+    <div class="slds-section slds-is-open" key={acc.Account.Id}>
+        <h3 class="slds-section__title">
+            <button aria-controls="accountList" class="slds-button slds-section__title-action">
+                <!--div class="slds-grid slds-wrap"-->
+                <div id={acc.Id} class="slds-truncate colWidth-1">
+                    <lightning-button-stateful data-target-id={acc.Account.Id} variant="text" icon-name-when-off="utility:chevronright" icon-name-when-on="utility:chevrondown" selected={acc.isExpanded}
+                        onclick={handleClick}>
+                    </lightning-button-stateful>
+                </div>
+                <div class="slds-truncate colWidth-2" title={acc.Account.Name}>{acc.Account.Name}</div>
+                <div class="slds-truncate colWidth-3" title={acc.Account.Type} >{acc.Account.Type}</div>
+                <div class="slds-truncate colWidth-4" title={acc.Account.Phone} >{acc.Account.Phone}</div>
+                <div class="slds-truncate colWidth-5" title={acc.Account.Rating}>{acc.Account.Rating}</div>
+            </button>
+        </h3>
+        <div class="slds-section__content" id={acc.Account.Id} if:true={acc.isExpanded} >
+          <div if:true={acc.Account.Opportunities} class="slds-box">
+            <c-custom-table-section all-opportunities={acc.Account.Opportunities}></c-custom-table-section >   
+          </div>
+          <div if:false={acc.Account.Opportunities} class="slds-box">
+            No opportunities found
+          </div>
+        </div>
+    </div>
+    </template>
+</template>
