@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+		<members>CareObservation.Blood_Pressure_Reading__c</members>
+        <members>CareObservation.CareObservationId__c</members>
+		<name>CustomField</name>
+	</types>
+    <types>
+        <members>CareObservation__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+		<members>CareObservation__c</members>
+		<name>CustomTab</name>
+	</types>
+    <types>
+        <members>DE_Clone_Care_Observation</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Remote_Monitoring_Charts1</members>
+        <name>WaveDashboard</name>
+    </types>
+    <types>     
+        <members>Clalit_Care_Observations_DF</members>
+        <name>WaveDataflow</name>
+    </types>
+    <types>
+        <members>Clalit_Care_Observations</members>
+        <name>WaveDataset</name>
+    </types>
+	<types>
+		<members>CareObservation__c</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>CareObservation-Care Observation Layout</members>
+		<members>CareObservation__c-Care Observation Layout</members>
+		<name>Layout</name>
+	</types>
+    <types>
+        <members>Remote_Monitoring_Charts1</members>
+        <name>WaveXmd</name>
+    </types>
+    <types>
+        <members>Analytics Cloud Integration User</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>DE_Remote_Monitoring_Permission_Set</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>49.0</version>
+</Package>
